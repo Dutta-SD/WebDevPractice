@@ -1,33 +1,32 @@
 <!DOCTYPE html>
+<html>
+
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
-    <title>Winners Cup</title>    
+    <title>Winners Cup</title>
 </head>
 
 <body>
     <!--Header-->
     <header id="header">
 
-        <!--Company logo-->        
-        <img
-            id="header-img"
-            src="Images/Sample_Logo.jpg"
-            alt="Company Logo"
-            align="left"
-        />
+        <!--Company logo-->
+        <img id="header-img"
+            src="https://raw.githubusercontent.com/Dutta-SD/FreeCodeCamp_Stash/main/HTML_CSS/TASK_3_Landing_Page/Images/Sample_Logo.jpg"
+            alt="Company Logo" align="left" />
 
         <h1>Cuppa Mania</h1>
-        
+
         <!--Navigation Menu-->
         <nav id="nav-bar">
             <table>
                 <tr>
-                    <th><a class="nav-link" href="#"> Home </a></th>
-                    <th><a class="nav-link" href="#"> About </a></th>
-                    <th><a class="nav-link" href="#"> Pricing </a></th>
-                    <th><a class="nav-link" href="#"> Contact </a></th>
+                    <th><a class="nav-link" href="#home"> Home </a></th>
+                    <th><a class="nav-link" href="#about"> About </a></th>
+                    <th><a class="nav-link" href="#pricing"> Pricing </a></th>
                 </tr>
-            </table>                
+            </table>
         </nav>
     </header>
 
@@ -35,21 +34,51 @@
     <div align="center">
         <video width="320" height="240" id="video" controls>
             <source src="Videos/sample.mp4" type="video/mp4">
-                Not supported
+            Not supported
         </video>
     </div>
 
-    <div id="form">
-        <form id="form">
-            <input id="email" type="email" placeholder="Email">
-            <input 
-            id="submit" 
-            type="submit" 
-            placeholder="Submit!" 
-            formaction="https://www.freecodecamp.com/email-submit">
+    <div>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <input id="email" type="email" placeholder="Email" name="email">
+            <input id="submit" type="submit" placeholder="Submit!">
         </form>
     </div>
 
+    <div id="home">
+        <p>
+            <h2>Welcome to Awesome Cup page</h2>
+            We are so glad for you to see our awesome cup. 
+            This cup will give you the most awesome taste you have even had.
+        </p>
+    </div>
 
+    <div id="about">
+        <p>
+            <h2>About Awesome Cup</h2>
+            Awesome cup makes your life easier and fun.
+        </p>
+    </div>
+
+    <div id="pricing">
+        <h2>Price</h2>
+        <table>
+            <tr>
+                <th>Small</th>
+                <th>Medium</th>
+                <th>Large</th>
+            </tr>
+
+            <tr>
+                <th>5</th>
+                <th>10</th>
+                <th>15</th>
+            </tr>
+        </table>
+    </div>
 
 </body>
+
+<script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+
+</html>
