@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="UTF-8">
+		<title>Survey Form</title>		
+	</head>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">		
+	
+	<body>
+		<div class="card">
+			<h1 id="title">Sample Survey Form</h1>
+			<p id="description">Sample form for Modern Sciences</p>
+			<hr>
+			<br>
+			
+			
+			<form id="survey-form">
+				<!-- Name -->
+				<label for="name" id="name-label">Enter Your Full Name</label>
+				<br>
+				<input type="text" id="name" size="70px" placeholder="Name" required>
+				<br><br>
+				
+				<!--email-->
+				<label for="email" id="email-label">Enter Your Email</label>
+				<br>
+				<input id="email" type="email"  size="70" placeholder="EMail" required>
+				<br><br>
+				
+				<label for="number" id="number-label">Enter Your Number</label>
+				<br>
+				<input id="number" type="number"  size="70" min="0" max="100" placeholder="Number">
+				<br><br>
+				
+				<label for="dropdown">Choose a car:</label>
+				<br>
+				<select name="dropdown" id="dropdown">
+		  			<option value="volvo">Volvo</option>
+		  			<option value="saab">Saab</option>
+		  			<option value="mercedes">Mercedes</option>
+		  			<option value="audi">Audi</option>
+				</select>
+				<br><br>
+				
+				<label for="rad-grp">Do you feel happy?</label>
+				<br>		
+					<input type="radio" size="2" id="radio-button1" name="rad-grp" value="1">
+					<label for="radio-button1">Yes</label>
+					
+					
+					<input type="radio" size="2" id="radio-button2" name="rad-grp" value="2">
+					<label for="radio-button2">No</label>
+					
+					
+					<input type="radio" size="2" id="radio-button3" name="rad-grp" value="3">
+					<label for="radio-button3">Somewhat</label>
+				<br><br>
+				
+				<label for="dreams">What do you dream about?</label>
+				<br>
+				
+					<label for="cb1">Fly in the sky</label>
+					<input type="checkbox" name="dreams" size="1" id="cb1"
+					value="1">
+					<br>
+				
+					<label for="cb2">X ray Vision</label>
+					<input type="checkbox" name="dreams" size="1" id="cb2"
+					value="2">
+					<br>
+				
+					<label for="cb3">Fast Car</label>
+					<input type="checkbox" name="dreams" size="1" id="cb3"
+					value="3">
+					<br>
+				
+					<label for="cb4">World Champion</label>
+					<input type="checkbox" name="dreams" size="1" id="cb4"
+					value="4">
+					<br>
+				
+					<label for="cb5">A Happy Life</label>
+					<input type="checkbox" name="dreams" size="1" id="cb5"
+					value="5">
+					<br><br>
+				
+					<label for="comments">Any additional Comments?</label>
+					<br>
+					<textarea  id="comments" name="comments" rows="5" cols="80" placeholder="Any More Comments?">
+					</textarea>
+					<br><br>
+				
+				<button id="submit">Submit</button>		
+			</form>
+		</div>	
+	</body>
+</html>
