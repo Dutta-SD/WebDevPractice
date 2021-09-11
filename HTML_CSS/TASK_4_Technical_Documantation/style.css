@@ -1,0 +1,26 @@
+#navbar{
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 160px;
+}
+
+@media only screen and (max-width: 1000px){
+    #navbar{
+        display: none; 
+    }
+    body{
+        background-color: rgb(135, 197, 176);
+    }
+}
+
+#main-doc{
+    margin-left: 160px;
+}
+
+header{
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+}
