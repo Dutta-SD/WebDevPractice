@@ -1,0 +1,24 @@
+/* CSS for index.html */
+
+@media only screen and (max_width : 400px) {
+    body{
+        background-color: rgb(197, 131, 49);
+        font-family: monospace;    
+    }
+    #navbar{
+        display: none;
+    }
+}
+
+#welcome-section{
+    height: 100vh;
+}
+
+#navbar{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-bottom: 30 px;
+}
