@@ -26,7 +26,9 @@ const TodoItem = (props: TodoItemProps) => {
 };
 
 const Todo = () => {
-  const [allTodos, setAllTodos] = useState<Array<string>>(["Example 1"]);
+  const storedTodosStr = localStorage.getItem("todos");
+  const storedTodos: Array<string> = storedTodosStr ? JSON.parse(storedTodosStr) : [];
+  const [allTodos, setAllTodos] = useState<Array<string>>(storedTodos);
   const [newTodo, setNewTodo] = useState("");
   const submitNewTodo = (e: React.FormEvent) => {
     e.preventDefault();
@@ -37,16 +39,9 @@ const Todo = () => {
 
   // Store whenever changes
   useEffect(() => {
+    console.log("Setting.......", allTodos)
     localStorage.setItem("todos", JSON.stringify(allTodos));
   }, [allTodos]);
-
-  // On Mount
-  useEffect(() => {
-    const stored = localStorage.getItem("todos");
-    if (stored) {
-      setAllTodos(JSON.parse(stored));
-    }
-  }, []);
 
   return (
     <div>
