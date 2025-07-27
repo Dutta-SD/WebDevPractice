@@ -30,10 +30,24 @@ const Todo = () => {
   const [newTodo, setNewTodo] = useState("");
   const submitNewTodo = (e: React.FormEvent) => {
     e.preventDefault();
+    if (newTodo.trim() === "") return;
     setAllTodos([newTodo, ...allTodos]);
     setNewTodo("");
   };
-  useEffect(() => {}, [allTodos]);
+
+  // Store whenever changes
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(allTodos));
+  }, [allTodos]);
+
+  // On Mount
+  useEffect(() => {
+    const stored = localStorage.getItem("todos");
+    if (stored) {
+      setAllTodos(JSON.parse(stored));
+    }
+  }, []);
+
   return (
     <div>
       <h3>All TODOS</h3>
